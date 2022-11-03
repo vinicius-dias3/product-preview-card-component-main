@@ -7,14 +7,6 @@ Parágrafos 14px*/
     box-sizing: border-box;
 }
 
-:root {
-    --preco-destaque: hsl(158, 36%, 37%);
-    --preco-destaque-hover: hsl(158, 36%, 20%);
-    --background-body: hsl(30, 38%, 92%);
-    --cor-paragrafo: hsl(228, 12%, 48%);
-
-}
-
 body {
     background-color: hsl(30, 38%, 92%);
     height: 100vh;
@@ -66,13 +58,22 @@ body {
     color: #000;
 }
 
-.preco p {
-    text-decoration: line-through;
+.conteudo .valores {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.span {
-    color: var(--preco-destaque-hover);
-    font-size: 3em;
+.valores .valor.novo {
+    color: var(--preco-destaque);
+    font-size: 2.3em;
+    font-family: 'Fraunces', serif;
+    text-decoration: none;
+}
+
+.valores .valor.antigo {
+    text-decoration: line-through;
+
 }
 
 .conteudo .btn {
@@ -81,11 +82,14 @@ body {
     color: #fff;
     font-weight: 700;
     text-align: center;
+    text-decoration: none;
     border-radius: 12px;
+    margin-bottom: 1em;
 }
 
 .conteudo .btn:hover {
     background-color: var(--preco-destaque-hover);
+    cursor: pointer;
 }
 
 @media (max-width: 776px) {
@@ -98,17 +102,22 @@ body {
         border-radius: 15px 15px 0 0;
     }
 
+    .main .conteudo {
+        justify-content: center;
+        gap: 25px;
+        padding: 1em;
+    }
+    
     .conteudo p {
         margin-top: 10px;
     }
 
-    .main .conteudo {
-        justify-content: center;
-        padding: 1em;
-    }
-
     .conteudo h1 {
         font-size: 2.2em;
+    }
+
+    .conteudo .btn:active {
+        background-color: var(--preco-destaque-hover);
     }
 
 }

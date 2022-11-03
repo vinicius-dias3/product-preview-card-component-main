@@ -1,0 +1,7 @@
+:root {
+    --preco-destaque: hsl(158, 36%, 37%);
+    --preco-destaque-hover: hsl(158, 36%, 20%);
+    --background-body: hsl(30, 38%, 92%);
+    --cor-paragrafo: hsl(228, 12%, 48%);
+
+}
